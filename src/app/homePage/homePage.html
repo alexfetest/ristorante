@@ -1,0 +1,104 @@
+<header class="rif-home-header">
+  <div class="container-fluid">
+    <div class="container">
+      <div>
+        <h1>
+          Ristorante Il Fornello
+        </h1>
+        <p>
+          Simple, fresh ingredients, prepared and cooked with love and passion become truly great dishes, from wood-oven baked
+          Neapolitan style pizzas to pastas, entrees!
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container rif-home-page-body">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="rif-body-callout">
+        Our Unique Culinary Creations
+      </h3>
+      <div class="rif-body-text">
+        <h2>
+          Fichipizza
+        </h2>
+        <p>
+          A unique combination of Mediterranean and Italian pizza, topped with Mascarphone, proscuitto, figs, grando panado,
+          honey and arugula.
+        </p>
+        <p>
+          <a href="#">
+            More &raquo;
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="rif-body-callout">
+        <h3>
+          This Month's <br> Promotions
+        </h3>
+      </div>
+      <div class="rif-body-text">
+        <h2>
+          Weekend Grand Buffet
+        </h2>
+        <p>
+          Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees
+          and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+        </p>
+        <p>
+          <a href="#">
+            More &raquo;
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="rif-body-callout">
+        Meet our Culinary Specialists
+      </h3>
+      <div class="rif-body-text">
+        <h2>
+          Tommy McHugh
+        </h2>
+        <h4>
+          Executive Chef
+        </h4>
+        <p>
+          Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the
+          culinary world, he specializes in creating mouthwatering Mediterranean-Italian experiences.
+        </p>
+        <p>
+          <a href="#">
+            More &raquo;
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Menu</div>
+            <table class="table">
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+              <tr *ngFor="let item of restaurantMenuItems">
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.price }}</td>
+              </tr>
+            </table>
+          </div>
+    </div>
+  </div>
+</div>

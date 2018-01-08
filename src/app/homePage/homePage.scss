@@ -1,0 +1,68 @@
+.rif-home-header {
+  background-color: #7884cd;
+  color: #fff;
+  padding: 62px 0;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 80px;
+  }
+
+  p {
+    width: 480px;
+  }
+}
+
+.rif-home-page-body {
+  .row {
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 12px;
+    padding-top: 44px;
+
+    &:nth-child(odd) {
+      .rif-body-callout {
+        float: right;
+      }
+      .rif-body-text {
+        float: left;
+      }
+    }
+
+    &:nth-child(even) {
+      .rif-body-callout {
+        float: left;
+      }
+      .rif-body-text {
+        float: right;
+      }
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  h2 {
+    margin-top: 0px;
+    font-size: 20px;
+  }
+
+  h3 {
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 32px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  .rif-body-text {
+    width: 534px;
+  }
+}

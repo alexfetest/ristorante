@@ -1,0 +1,39 @@
+.rif-nav {
+  .navbar {
+    height: 35px;
+    min-height: 35px;
+    background-color: #2f3ba1;
+    border-bottom: 1px solid #1c214e;
+    border-radius: 0;
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    padding-right: 14px;
+    height: 34px;
+  }
+
+  .navbar-nav > li {
+    &:hover,
+    &.active > {
+      a {
+        background-color: #191e7f;
+        color: #fff;
+      }
+    }
+
+    a {
+      padding: 11px;
+      padding-bottom: 0px;
+      height: 34px;
+      line-height: 10px;
+      color: #8a8b9b;
+    }
+  }
+
+  .glyphicon {
+    top: 0px;
+  }
+}
