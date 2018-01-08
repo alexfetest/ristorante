@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
-import {}
 
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './mainNav/mainNav.component';
