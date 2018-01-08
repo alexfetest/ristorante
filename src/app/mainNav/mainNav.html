@@ -8,13 +8,20 @@
         <ul
           *ngFor="let menuItem of menuItems"
           class="nav navbar-nav">
-          <li [ngClass]="{ 'active': menuItem.active }">
-            <a href="#">
+          <li [ngClass]="{ 'active': menuItem.active, 'dropdown-toggle': menuItem.dropdown }">
+            <a href="{{ menuItem.link }}">
               <span
                 class="glyphicon"
-                [ngClass]="'glyphicon-'+menuItem.icon"></span>
-              {{ menuItem.name }}
+                [ngClass]="'glyphicon-'+menuItem.icon"></span>{{ menuItem.name }}
+              <span
+                *ngIf="menuItem.dropdown"
+                class="caret"></span>
             </a>
+            <ul
+              *ngFor="let subMenuItem of menuItem.dropdown"
+              class="dropdown-menu">
+              <a>{{ subMenuItem.name }}</a>
+            </ul>
           </li>
         </ul>
       </div>

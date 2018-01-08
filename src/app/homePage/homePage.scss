@@ -1,15 +1,17 @@
 .rif-home-header {
   background-color: #7884cd;
   color: #fff;
-  padding: 62px 0;
+  padding: 60px 0;
 
   h1 {
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 68px;
+    font-size: 42px;
   }
 
   p {
-    width: 480px;
+    width: 500px;
+    margin-bottom: 0;
   }
 }
 
@@ -44,6 +46,7 @@
 
   p {
     font-size: 10px;
+    margin-bottom: 8px;
   }
 
   h2 {
@@ -53,13 +56,14 @@
 
   h3 {
     width: 200px;
+    padding: 0 20px;
     text-align: center;
     font-size: 16px;
     margin-top: 32px;
   }
 
   h4 {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .rif-body-text {
