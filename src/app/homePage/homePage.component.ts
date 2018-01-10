@@ -1,4 +1,23 @@
 import { Component } from '@angular/core';
+import { Column } from '../basicTable';
+
+const restaurantMenuColumns: Column[] = [
+  {
+    id: 'name',
+    title: 'Item',
+    type: 'text'
+  },
+  {
+    id: 'description',
+    title: 'Description',
+    type: 'text'
+  },
+  {
+    id: 'price',
+    title: 'Price',
+    type: 'number'
+  }
+];
 
 const restaurantMenuItems: {
     id: number,
@@ -47,5 +66,8 @@ export class HomePageComponent {
   constructor() {}
   ngOnInit() {}
 
+  tableTitle = 'Menu';
+  tableIsSearchable = true;
+  restaurantMenuColumns = restaurantMenuColumns;
   restaurantMenuItems = restaurantMenuItems;
 }

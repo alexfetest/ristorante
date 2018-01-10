@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {{ title }}
+    <span
+      *ngIf="isSearchable"
+      class="pull-right">Search
+      <input
+        [formControl]="searchInput"
+        type="text" /></span>
+  </div>
+  <table class="table">
+    <tr>
+      <th
+        *ngFor="let column of columns"
+        (click)="sortRowsBy(column.id, true)"
+        style="cursor: pointer;">
+        {{ column.title }}
+        <span
+          *ngIf="column.id === sortBy.columnId && sortBy.direction === 'asc'"
+          class="glyphicon glyphicon-chevron-up"></span>
+        <span
+          *ngIf="column.id === sortBy.columnId && sortBy.direction === 'desc'"
+          class="glyphicon glyphicon-chevron-down"></span>
+      </th>
+    </tr>
+    <tr *ngFor="let row of displayRows">
+      <td *ngFor="let column of columns">
+        {{ row[column.id] }}
+      </td>
+    </tr>
+    <tr *ngIf="!displayRows.length"><td colspan="100">No results matching the search! Please try another search.</td></tr>
+  </table>
+</div>
