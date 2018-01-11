@@ -1,0 +1,23 @@
+<h2>Soduko Solution Validator</h2>
+<table>
+  <tr [formGroup]="sudokuFormGroup" *ngFor="let sudokuRow of sudokuInputs, let rowIndex = index">
+    <td *ngFor="let sodukuCell of sudokuRow; let cellIndex = index">
+      <input
+        type="number"
+        [formControl]="this.sudokuFormGroup.controls[rowIndex+','+cellIndex]"
+        [value]="sodukuCell"
+        min="1"
+        max="9" />
+    </td>
+  </tr>
+</table>
+<br/>
+<div *ngIf="isSolution" class="panel panel-success">
+  <div class="panel-body" style="color: green;">Yes, the solution is correct!</div>
+</div>
+<div *ngIf="!isSolution" class="panel panel-danger">
+  <div class="panel-body" style="color: red;">No, the solution is incorrect!</div>
+</div>
+<button
+  (click)="validateSolution()"
+  class="btn-primary btn">Validate Solution!</button>

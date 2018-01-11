@@ -10,20 +10,23 @@ import { BasicTableComponent } from './basicTable/basicTable.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { SudokuComponent, SudokuService } from './sudoku/';
+
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     FooterComponent,
     HomePageComponent,
-    BasicTableComponent
+    BasicTableComponent,
+    SudokuComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SudokuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
